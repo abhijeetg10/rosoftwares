@@ -34,30 +34,56 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 2. Mobile Menu Toggle
+  // 2. Mobile Menu Toggle & Backdrop
   const mobileBtn = document.getElementById('mobileMenuBtn');
   const navLinks = document.getElementById('navLinks');
+  const navBackdrop = document.getElementById('navBackdrop');
+
+  function closeMobileMenu() {
+    if (navLinks) navLinks.classList.remove('open');
+    if (navBackdrop) navBackdrop.classList.remove('active');
+    if (mobileBtn) {
+      mobileBtn.setAttribute('aria-expanded', 'false');
+      const icon = mobileBtn.querySelector('i');
+      if (icon) {
+        icon.classList.add('fa-bars');
+        icon.classList.remove('fa-xmark');
+      }
+    }
+    document.body.classList.remove('menu-open');
+  }
+
+  function openMobileMenu() {
+    if (navLinks) navLinks.classList.add('open');
+    if (navBackdrop) navBackdrop.classList.add('active');
+    if (mobileBtn) {
+      mobileBtn.setAttribute('aria-expanded', 'true');
+      const icon = mobileBtn.querySelector('i');
+      if (icon) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-xmark');
+      }
+    }
+    document.body.classList.add('menu-open');
+  }
 
   if (mobileBtn && navLinks) {
     mobileBtn.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
-      const icon = mobileBtn.querySelector('i');
-      if (icon) {
-        icon.classList.toggle('fa-bars');
-        icon.classList.toggle('fa-xmark');
+      const isOpen = navLinks.classList.contains('open');
+      if (isOpen) {
+        closeMobileMenu();
+      } else {
+        openMobileMenu();
       }
     });
 
-    // Close on link click
+    if (navBackdrop) {
+      navBackdrop.addEventListener('click', closeMobileMenu);
+    }
+
+    // Close on link click inside drawer
     navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-        const icon = mobileBtn.querySelector('i');
-        if (icon) {
-          icon.classList.add('fa-bars');
-          icon.classList.remove('fa-xmark');
-        }
-      });
+      link.addEventListener('click', closeMobileMenu);
     });
   }
 

@@ -317,6 +317,31 @@ h1, h2, h3, h4, h5 {
   color: var(--text-main);
   font-size: 1.3rem;
   cursor: pointer;
+  padding: 6px;
+  border-radius: 6px;
+  line-height: 1;
+}
+
+.nav-drawer-cta {
+  display: none;
+}
+
+.nav-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  top: 61px;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 95;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+.nav-backdrop.active {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /* Hero Section */
@@ -1276,34 +1301,132 @@ input:focus, select:focus, textarea:focus {
 }
 
 @media (max-width: 768px) {
+  body.menu-open {
+    overflow: hidden;
+  }
+  .nav-backdrop {
+    display: block;
+  }
   .nav-links {
-    display: none;
+    display: flex;
+    flex-direction: column;
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
     background: var(--bg-surface);
-    flex-direction: column;
-    padding: 1.25rem 0;
-    border-bottom: 1px solid var(--border-subtle);
+    padding: 1.25rem 1.5rem 1.75rem;
+    border-bottom: 1px solid var(--border-medium);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+    gap: 0.4rem;
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
+    visibility: hidden;
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+    z-index: 101;
   }
-  .nav-links.open { display: flex; }
-  .mobile-toggle { display: block; }
-  .hero-title { font-size: 2.2rem; }
-  .hero-office-img { height: 260px; }
+  .nav-links.open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    visibility: visible;
+  }
+  .nav-item {
+    padding: 0.85rem 1rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    color: var(--text-main);
+    transition: all 0.2s ease;
+  }
+  .nav-item:hover, .nav-item:active {
+    background: var(--bg-surface-hover);
+    color: var(--cyan-primary);
+  }
+  .nav-drawer-cta {
+    display: inline-flex;
+    margin-top: 0.85rem;
+    width: 100%;
+    justify-content: center;
+    padding: 12px;
+  }
+  .mobile-toggle {
+    display: inline-flex;
+  }
+
+  .section {
+    padding: 4rem 0;
+  }
+  .hero-section {
+    padding: 3.5rem 0 3rem;
+  }
+  .hero-title {
+    font-size: clamp(2rem, 6.5vw, 2.5rem);
+  }
+  .hero-desc {
+    font-size: 1rem;
+    margin-bottom: 1.75rem;
+  }
+  .hero-office-img {
+    height: 250px;
+  }
   .hero-floating-overlay {
     position: static;
     border-radius: 0;
     border-top: 1px solid var(--border-subtle);
+    padding: 12px 14px;
   }
-  .metrics-row { grid-template-columns: 1fr; gap: 1rem; }
-  .metric-card { border-right: none; border-bottom: 1px solid var(--border-subtle); padding-bottom: 1rem; }
-  .metric-card:last-child { border-bottom: none; }
-  .form-row { grid-template-columns: 1fr; }
+  .metrics-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .metric-card {
+    border-right: none;
+    border-bottom: 1px solid var(--border-subtle);
+    padding: 1.25rem 0.5rem;
+  }
+  .metric-card:last-child {
+    border-bottom: none;
+  }
+  .metric-number {
+    font-size: 2.2rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .case-study-card {
+    padding: 1.75rem 1.4rem;
+  }
+  .active-preview-img {
+    height: 200px;
+  }
+  .screen-thumb-bar {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 4px;
+    padding: 4px;
+  }
+  .screen-thumb-bar::-webkit-scrollbar {
+    display: none;
+  }
+  .thumb-tab {
+    flex: 1 0 auto;
+    white-space: nowrap;
+    padding: 8px 12px;
+    font-size: 0.75rem;
+  }
+
   .leader-profile-card {
     grid-template-columns: 1fr;
     text-align: center;
-    padding: 2.2rem 1.6rem;
+    padding: 2.4rem 1.5rem;
     gap: 2rem;
   }
   .leader-role-tag {
@@ -1311,9 +1434,135 @@ input:focus, select:focus, textarea:focus {
   }
   .leader-tech-row {
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
   }
-  .team-callout { flex-direction: column; text-align: center; }
-  .contact-form-panel { padding: 1.75rem 1.5rem; }
+  .leader-highlights {
+    text-align: left;
+  }
+  .leader-quick-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    padding: 10px 8px;
+    width: 100%;
+  }
+  .lqs-divider {
+    display: none;
+  }
+
+  .team-callout {
+    flex-direction: column;
+    text-align: center;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  .contact-form-panel {
+    padding: 1.75rem 1.5rem;
+  }
+
+  /* Prevent auto-zoom on iOS inputs */
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select,
+  textarea {
+    font-size: 16px;
+    padding: 12px 14px;
+  }
+}
+
+@media (max-width: 580px) {
+  .container {
+    width: 92%;
+  }
+  .nav-actions .btn-nav {
+    display: none;
+  }
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+  .hero-cta-group .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 13px 20px;
+    font-size: 0.95rem;
+  }
+  .status-badge {
+    font-size: 0.76rem;
+    padding: 5px 12px;
+    max-width: 100%;
+    white-space: normal;
+    line-height: 1.35;
+  }
+  .grid-3 {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .process-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2.2rem;
+  }
+  .footer-bottom {
+    flex-direction: column-reverse;
+    gap: 1.2rem;
+    text-align: center;
+  }
+  .back-to-top {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 14px;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: 9999px;
+  }
+}
+
+@media (max-width: 420px) {
+  .brand-logo {
+    width: 32px;
+    height: 32px;
+  }
+  .brand-name {
+    font-size: 1.02rem;
+  }
+  .brand-motto {
+    font-size: 0.58rem;
+  }
+  .hero-title {
+    font-size: 1.85rem;
+  }
+  .hero-office-img {
+    height: 210px;
+  }
+  .case-study-card {
+    padding: 1.35rem 1.15rem;
+  }
+  .active-preview-img {
+    height: 175px;
+  }
+  .leader-profile-card {
+    padding: 1.75rem 1.15rem;
+  }
+  .leader-photo-frame {
+    width: 110px;
+    height: 110px;
+    margin-bottom: 0.85rem;
+  }
+  .leader-name {
+    font-size: 1.45rem;
+  }
+  .contact-form-panel {
+    padding: 1.4rem 1.15rem;
+  }
 }
 
 /* Image Lightbox Modal */
@@ -1324,7 +1573,7 @@ input:focus, select:focus, textarea:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem;
+  padding: 1.25rem;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.25s ease;
@@ -1343,7 +1592,7 @@ input:focus, select:focus, textarea:focus {
 .lightbox-content {
   position: relative;
   z-index: 2;
-  max-width: 92vw;
+  max-width: 94vw;
   max-height: 90vh;
   display: flex;
   flex-direction: column;
@@ -1351,7 +1600,7 @@ input:focus, select:focus, textarea:focus {
 }
 .lightbox-content img {
   max-width: 100%;
-  max-height: 80vh;
+  max-height: 78vh;
   object-fit: contain;
   border-radius: 10px;
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
@@ -1359,17 +1608,19 @@ input:focus, select:focus, textarea:focus {
 }
 .lightbox-caption {
   color: #ffffff;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   font-weight: 600;
-  margin-top: 14px;
-  background: rgba(0, 0, 0, 0.6);
+  margin-top: 12px;
+  background: rgba(0, 0, 0, 0.65);
   padding: 6px 16px;
   border-radius: 9999px;
   border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  max-width: 90vw;
 }
 .lightbox-close {
   position: absolute;
-  top: -44px;
+  top: -46px;
   right: 0;
   background: none;
   border: none;
@@ -1378,10 +1629,26 @@ input:focus, select:focus, textarea:focus {
   cursor: pointer;
   line-height: 1;
   opacity: 0.8;
-  transition: opacity 0.2s ease;
+  padding: 4px;
+  transition: opacity 0.2s ease, color 0.2s ease;
 }
 .lightbox-close:hover {
   opacity: 1;
   color: var(--cyan-primary);
+}
+
+@media (max-width: 580px) {
+  .lightbox-close {
+    top: -44px;
+    right: 4px;
+    font-size: 2rem;
+  }
+  .lightbox-content img {
+    max-height: 70vh;
+  }
+  .lightbox-caption {
+    font-size: 0.8rem;
+    padding: 4px 12px;
+  }
 }
 
