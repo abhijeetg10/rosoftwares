@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RO Softwares — Web Development, Event Platforms & Automation</title>
+  <meta name="description" content="RO Softwares is a dedicated software development team. You think it on paper, we build it with technology." />
+  
+  <!-- Clean Modern Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  
+  <!-- Clean Design Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Clean, Sleek Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="brand">
+        <img src="ROLogo.jpeg" alt="RO Softwares" class="brand-logo" />
+        <div class="brand-text">
+          <span class="brand-name">RO SOFTWARES</span>
+          <span class="brand-motto">BUILD • AUTOMATE • GROW</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#about" class="nav-item">About</a>
+        <a href="#services" class="nav-item">Services</a>
+        <a href="#projects" class="nav-item">Projects</a>
+        <a href="#team" class="nav-item">Our Team</a>
+        <a href="#process" class="nav-item">Process</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Minimal Theme Switcher (Dark & Light) -->
+        <button class="theme-btn" id="themeToggleBtn" aria-label="Toggle Theme" title="Toggle Light / Dark mode">
+          <i class="fa-solid fa-moon" id="themeIcon"></i>
+        </button>
+
+        <a href="#contact" class="btn btn-nav">Start a Project</a>
+
+        <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        <div class="hero-grid">
+          
+          <div class="hero-text-col">
+            <div class="status-badge">
+              <span class="pulse-dot"></span>
+              <span>Open for new client projects & inquiries</span>
+            </div>
+
+            <h1 class="hero-title">
+              You think it on paper.<br />
+              <span class="gradient-text">We build it with technology.</span>
+            </h1>
+
+            <p class="hero-desc">
+              RO Softwares is an agile digital product engineering team. We build high-speed web applications, mission-critical event platforms, and automated management systems that turn your ideas into market-ready reality.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#contact" class="btn btn-primary">
+                <span>Discuss Your Project</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a href="#projects" class="btn btn-secondary">
+                <span>Explore Past Work</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-visual-col">
+            <div class="hero-image-card">
+              <div class="hero-card-header">
+                <div class="window-dots">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                </div>
+                <span class="window-title">RO Softwares Engineering Lab</span>
+                <span class="live-pill"><i class="fa-solid fa-bolt"></i> Active Sprint</span>
+              </div>
+              <div class="hero-img-wrapper">
+                <img src="hero-studio.jpg" alt="RO Softwares Team Engineering Studio" class="hero-office-img" />
+                <div class="hero-floating-overlay">
+                  <i class="fa-solid fa-compass-drafting text-cyan"></i>
+                  <div class="hfo-text">
+                    <strong>Paper Concept to Scaled Production</strong>
+                    <span>6 Core Specialists • Zero Bureaucracy</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Uniform 3-Column Metrics Row -->
+        <div class="metrics-row">
+          <div class="metric-card">
+            <span class="metric-num">10,000+</span>
+            <span class="metric-label">Live Event Users Handled</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-num">99.9%</span>
+            <span class="metric-label">Uptime & Reliability</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-num">6</span>
+            <span class="metric-label">Specialized Core Engineers</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The 3 Pillars: BUILD • AUTOMATE • GROW -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="tagline">OUR PHILOSOPHY</span>
+          <h2 class="section-title">The Three Pillars of RO Softwares</h2>
+          <p class="section-subtitle">A simple, focused framework designed to give your business reliable technology that works.</p>
+        </div>
+
+        <div class="grid-3">
+          <div class="pillar-card">
+            <div class="pillar-icon cyan"><i class="fa-solid fa-laptop-code"></i></div>
+            <h3>1. BUILD</h3>
+            <p>Modern architectures, clean codebases, and intuitive responsive user interfaces built with performance and long-term scalability in mind.</p>
+            <ul class="pillar-list">
+              <li><i class="fa-solid fa-check"></i> Custom Web Applications</li>
+              <li><i class="fa-solid fa-check"></i> Mobile-Friendly PWAs & Portals</li>
+              <li><i class="fa-solid fa-check"></i> Secure Cloud Deployments</li>
+            </ul>
+          </div>
+
+          <div class="pillar-card featured">
+            <div class="card-badge">Core Speciality</div>
+            <div class="pillar-icon indigo"><i class="fa-solid fa-gears"></i></div>
+            <h3>2. AUTOMATE</h3>
+            <p>Eliminate manual operational headaches. We design automated workflows, payment reconciliation, QR systems, and notification pipelines.</p>
+            <ul class="pillar-list">
+              <li><i class="fa-solid fa-check"></i> Automated Billing & WhatsApp Alerts</li>
+              <li><i class="fa-solid fa-check"></i> Real-Time Live Scoring Engines</li>
+              <li><i class="fa-solid fa-check"></i> Member Check-in & QR Passes</li>
+            </ul>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon purple"><i class="fa-solid fa-chart-line"></i></div>
+            <h3>3. GROW</h3>
+            <p>Software that serves as an engine for your business growth with high uptime, SEO readiness, fast loading speeds, and proactive maintenance.</p>
+            <ul class="pillar-list">
+              <li><i class="fa-solid fa-check"></i> Fast Core Web Vitals & SEO</li>
+              <li><i class="fa-solid fa-check"></i> 24/7 Monitoring & Technical Support</li>
+              <li><i class="fa-solid fa-check"></i> Scalable Infrastructure on Demand</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section section-alt" id="services">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="tagline">OUR CAPABILITIES</span>
+          <h2 class="section-title">What We Can Do For You</h2>
+          <p class="section-subtitle">Dedicated engineering solutions customized to your exact requirements.</p>
+        </div>
+
+        <div class="grid-3">
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+            <h4>Full-Stack Web Development</h4>
+            <p>Responsive, clean, modern websites and dashboards built with speed, accessibility, and high performance from day one.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-bolt"></i></div>
+            <h4>Live Event & Quiz Engines</h4>
+            <p>Concurrency-optimized platforms for digital exams and live stage events with automated timers, anti-cheat, and real-time leaderboards.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-dumbbell"></i></div>
+            <h4>Gym & Club Management Systems</h4>
+            <p>Complete management software for fitness centers with digital memberships, attendance QR tracking, and WhatsApp renewal notifications.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-diagram-project"></i></div>
+            <h4>Bespoke Business Portals</h4>
+            <p>Replace paper sheets and spreadsheets with private web portals, role-based access, and exportable financial reports.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-plug-circle-bolt"></i></div>
+            <h4>API & Payment Gateways</h4>
+            <p>Seamless integrations with Razorpay, Stripe, WhatsApp Cloud APIs, SMS notifications, and automated billing workflows.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-headset"></i></div>
+            <h4>On-Site & Cloud Tech Support</h4>
+            <p>Direct technical supervision during high-stakes launches and live competitions to ensure zero downtime.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Case Studies (Clean & Uniform) -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="tagline">PROVEN WORK</span>
+          <h2 class="section-title">Featured Projects & Case Studies</h2>
+          <p class="section-subtitle">Real software delivered and battle-tested under live operational demands.</p>
+        </div>
+
+        <div class="projects-grid">
+          
+          <!-- Project 1: Quiz Engine (Team Tameer) -->
+          <div class="case-card tameer-featured-card">
+            <div class="case-top">
+              <span class="case-pill">Live Event Platform</span>
+              <span class="case-client">Organized by Team Tameer</span>
+            </div>
+            <h3 class="case-title">Team Tameer — State-Level Digital Quiz & Live Stage Arena</h3>
+            
+            <!-- Real Project Screenshots Showcase -->
+            <div class="project-screens-wrapper">
+              <div class="screen-display" id="tameerScreenDisplay" title="Click to view full screenshot">
+                <img src="projects/tameer1.png" alt="State-Level GK Quiz Contest 2026 - Grand Stage Arena" class="active-preview-img" id="currentTameerImg" />
+                <div class="screen-overlay-badge">
+                  <span class="zoom-btn"><i class="fa-solid fa-expand"></i> Click to Zoom</span>
+                </div>
+              </div>
+              <div class="screen-thumb-bar">
+                <button type="button" class="thumb-tab active" data-target="tameer" data-src="projects/tameer1.png" data-caption="Team Tameer - Official State Championship Grand Stage Arena">
+                  <img src="projects/tameer1.png" alt="Thumbnail 1" class="thumb-mini" />
+                  <span>Grand Arena</span>
+                </button>
+                <button type="button" class="thumb-tab" data-target="tameer" data-src="projects/tameer2.png" data-caption="Team Tameer - Live Buzzer Round & Question Controller">
+                  <img src="projects/tameer2.png" alt="Thumbnail 2" class="thumb-mini" />
+                  <span>Buzzer Round</span>
+                </button>
+                <button type="button" class="thumb-tab" data-target="tameer" data-src="projects/tameer3.png" data-caption="Team Tameer - Tournament Progression Tree (34 Schools)">
+                  <img src="projects/tameer3.png" alt="Thumbnail 3" class="thumb-mini" />
+                  <span>Tournament Tree</span>
+                </button>
+              </div>
+            </div>
+
+            <p class="case-desc">
+              Provided complete end-to-end technical infrastructure, real-time exam portal, and on-ground operational support for a large-scale statewide quiz competition organized by Team Tameer. Handled thousands of concurrent participants with instant scoring and live projector leaderboards without a single second of downtime.
+            </p>
+            <div class="case-features">
+              <div class="cf-item"><i class="fa-solid fa-check"></i> 10,000+ Students Handled Simultaneously</div>
+              <div class="cf-item"><i class="fa-solid fa-check"></i> Anti-Cheat & Tab-Switch Detection</div>
+              <div class="cf-item"><i class="fa-solid fa-check"></i> Zero Downtime & On-Ground Monitoring</div>
+            </div>
+            <div class="tech-pills">
+              <span>Node.js</span>
+              <span>WebSockets</span>
+              <span>Redis</span>
+              <span>Anti-Cheat Guard</span>
+              <span>On-Site Support</span>
+            </div>
+          </div>
+
+          <!-- Project 2: Gym Platform (RV Fitness) -->
+          <div class="case-card gym-featured-card">
+            <div class="case-top">
+              <span class="case-pill">Fitness SaaS & Web</span>
+              <span class="case-client">Client: RV Fitness</span>
+            </div>
+            <h3 class="case-title">RV Fitness — Complete Web Platform & Management System</h3>
+            
+            <!-- Real Project Screenshots Interactive Showcase -->
+            <div class="project-screens-wrapper">
+              <div class="screen-display" id="gymScreenDisplay" title="Click to view full screenshot">
+                <img src="projects/Gym.png" alt="RV Fitness Web Platform - Pricing & Hero" class="active-preview-img" id="currentGymImg" />
+                <div class="screen-overlay-badge">
+                  <span class="zoom-btn"><i class="fa-solid fa-expand"></i> Click to Zoom</span>
+                </div>
+              </div>
+              <div class="screen-thumb-bar">
+                <button type="button" class="thumb-tab active" data-src="projects/Gym.png" data-caption="RV Fitness - Landing & Membership Pricing">
+                  <img src="projects/Gym.png" alt="Thumbnail 1" class="thumb-mini" />
+                  <span>Landing & Pricing</span>
+                </button>
+                <button type="button" class="thumb-tab" data-src="projects/Gym1.png" data-caption="RV Fitness - Core Principles & Training Studio">
+                  <img src="projects/Gym1.png" alt="Thumbnail 2" class="thumb-mini" />
+                  <span>Principles & Studio</span>
+                </button>
+              </div>
+            </div>
+
+            <p class="case-desc">
+              Designed and built the full digital presence and management system for <strong>RV Fitness</strong>. Replaced physical paper logs with an automated digital workflow featuring dynamic membership tiers (₹1,500/mo, ₹7,500/6-mo, ₹12,000/yr), class scheduling, and member communication.
+            </p>
+            <div class="case-features">
+              <div class="cf-item"><i class="fa-solid fa-check"></i> Digital Tiered Membership & Pricing Portal</div>
+              <div class="cf-item"><i class="fa-solid fa-check"></i> Automated WhatsApp Renewal Alerts</div>
+              <div class="cf-item"><i class="fa-solid fa-check"></i> Responsive Mobile & Tablet Experience</div>
+            </div>
+            <div class="tech-pills">
+              <span>Modern Web App</span>
+              <span>Pricing Engine</span>
+              <span>WhatsApp Alerts</span>
+              <span>PWA Mobile</span>
+              <span>Admin Suite</span>
+            </div>
+          </div>
+
+          <!-- Project 3: Custom Business Software -->
+          <div class="case-card">
+            <div class="case-top">
+              <span class="case-pill">Custom Software</span>
+              <span class="case-client">Startups & Enterprises</span>
+            </div>
+            <h3 class="case-title">Tailored Business Portals & Workflow Systems</h3>
+            <p class="case-desc">
+              Bespoke web applications built around clients' specific operational requirements. Whether it's an internal company portal, inventory management, or customer booking system, we transform paper notes into reliable, secure software.
+            </p>
+            <div class="case-features">
+              <div class="cf-item"><i class="fa-solid fa-check"></i> 100% Customized to Client Business Logic</div>
+              <div class="cf-item"><i class="fa-solid fa-check"></i> Role-Based Access Control (RBAC)</div>
+              <div class="cf-item"><i class="fa-solid fa-check"></i> Automated PDF Reports & Cloud Backup</div>
+            </div>
+            <div class="tech-pills">
+              <span>Full-Stack Web</span>
+              <span>PostgreSQL / MongoDB</span>
+              <span>REST APIs</span>
+              <span>Cloud VPS</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Engineering Leadership / Core Team -->
+    <section class="section section-alt" id="team">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="tagline">ENGINEERING LEADERSHIP</span>
+          <h2 class="section-title">Meet Our Lead Developer</h2>
+          <p class="section-subtitle">Dedicated technical leadership guiding every codebase, architecture decision, and live deployment at RO Softwares.</p>
+        </div>
+
+        <div class="leader-showcase-wrapper">
+          <div class="leader-profile-card">
+            
+            <div class="leader-avatar-side">
+              <div class="leader-photo-frame">
+                <img src="REHAN PROFILE.jpg" alt="Rehan Chougle - Senior Software Developer" class="leader-photo" />
+                <span class="leader-badge"><i class="fa-solid fa-code"></i> Lead</span>
+              </div>
+              <div class="leader-quick-stats">
+                <div class="lqs-item">
+                  <strong>Full-Stack</strong>
+                  <span>Architecture</span>
+                </div>
+                <div class="lqs-divider"></div>
+                <div class="lqs-item">
+                  <strong>Live Ops</strong>
+                  <span>Zero Downtime</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="leader-info-side">
+              <div class="leader-role-tag">Core Technical Lead & Architect</div>
+              <h3 class="leader-name">Rehan Chougle</h3>
+              <span class="leader-title">Senior Software Developer & Lead Architect</span>
+              <p class="leader-bio">
+                Leads system architecture, high-concurrency event reliability, database engineering, and end-to-end cloud deployments at RO Softwares. Supported by an agile squad of developers and specialists, Rehan works directly with clients to turn paper concepts into robust, scalable production systems.
+              </p>
+
+              <div class="leader-highlights">
+                <div class="lh-point">
+                  <i class="fa-solid fa-check"></i>
+                  <span>Direct architectural oversight on all client web applications & databases</span>
+                </div>
+                <div class="lh-point">
+                  <i class="fa-solid fa-check"></i>
+                  <span>Architect of the Team Tameer State-Level Quiz Engine (10,000+ users)</span>
+                </div>
+                <div class="lh-point">
+                  <i class="fa-solid fa-check"></i>
+                  <span>Lead developer for RV Fitness management & membership platform</span>
+                </div>
+              </div>
+
+              <div class="leader-tech-row">
+                <span>System Architecture</span>
+                <span>Node.js</span>
+                <span>Distributed APIs</span>
+                <span>WebSockets</span>
+                <span>DevOps & Cloud</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Direct Communication Callout -->
+        <div class="team-callout">
+          <div class="callout-text">
+            <h3>Direct Developer Communication</h3>
+            <p>With RO Softwares, you don't talk to disconnected middle managers. You work directly with technical leadership building and maintaining your product.</p>
+          </div>
+          <a href="#contact" class="btn btn-primary">Work With Us</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4-Step Process -->
+    <section class="section" id="process">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="tagline">HOW WE WORK</span>
+          <h2 class="section-title">From Concept on Paper to Code</h2>
+          <p class="section-subtitle">A straightforward 4-step journey with total transparency.</p>
+        </div>
+
+        <div class="process-grid">
+          <div class="process-card">
+            <div class="step-num">01</div>
+            <h4>Concept on Paper</h4>
+            <p>You share your notes, rough sketches, or business idea. We break it down into clean technical requirements.</p>
+          </div>
+
+          <div class="process-card">
+            <div class="step-num">02</div>
+            <h4>Design & Prototype</h4>
+            <p>We create clean, interactive UI mockups so you can see and approve the layout before coding starts.</p>
+          </div>
+
+          <div class="process-card">
+            <div class="step-num">03</div>
+            <h4>Agile Development</h4>
+            <p>Weekly build sprints with regular live demos, thorough testing, and secure database integrations.</p>
+          </div>
+
+          <div class="process-card">
+            <div class="step-num">04</div>
+            <h4>Launch & Support</h4>
+            <p>Deployment on fast cloud servers with documentation, training, and ongoing technical maintenance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clean Contact Section -->
+    <section class="section section-alt" id="contact">
+      <div class="container">
+        <div class="contact-layout">
+          
+          <div class="contact-info-panel">
+            <span class="tagline">GET IN TOUCH</span>
+            <h2 class="section-title">Let's Discuss Your Next Project</h2>
+            <p class="contact-desc">
+              Whether you have an idea sketched on paper or need a complete platform for your gym, event, or business, we're ready to engineer it.
+            </p>
+
+            <div class="contact-channels">
+              <div class="channel-item">
+                <div class="channel-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div>
+                  <span class="channel-label">Email Us Directly</span>
+                  <a href="mailto:contact@rosoftwares.com" class="channel-value">contact@rosoftwares.com</a>
+                </div>
+              </div>
+
+              <div class="channel-item">
+                <div class="channel-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                <div>
+                  <span class="channel-label">WhatsApp Consultation</span>
+                  <a href="https://wa.me/?text=Hi%20RO%20Softwares,%20I%20have%20a%20project%20inquiry" target="_blank" class="channel-value">Chat with our engineering team</a>
+                </div>
+              </div>
+
+              <div class="channel-item">
+                <div class="channel-icon"><i class="fa-solid fa-users"></i></div>
+                <div>
+                  <span class="channel-label">Squad Availability</span>
+                  <span class="channel-value text-green">● Open for new projects</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="confidentiality-box">
+              <i class="fa-solid fa-shield-halved"></i>
+              <span>We respect your privacy. All ideas and discussions remain strictly confidential.</span>
+            </div>
+          </div>
+
+          <div class="contact-form-panel">
+            <form class="clean-form" id="contactForm">
+              <h3>Send Us a Message</h3>
+              <p>Tell us a bit about what you want to build and we'll reply within 24 hours.</p>
+
+              <div class="form-group">
+                <label for="name">Your Name *</label>
+                <input type="text" id="name" required placeholder="e.g. Rahul Sharma" />
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">Email Address *</label>
+                  <input type="email" id="email" required placeholder="rahul@example.com" />
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone / WhatsApp</label>
+                  <input type="tel" id="phone" placeholder="+91 98765 43210" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="projectType">Project Category</label>
+                <select id="projectType">
+                  <option value="gym">Gym / Fitness Platform</option>
+                  <option value="event">Live Event / Quiz Engine</option>
+                  <option value="web">Business Website / Web App</option>
+                  <option value="custom">Custom Paper Sketch / Startup Idea</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Project Overview *</label>
+                <textarea id="message" rows="4" required placeholder="Describe your idea, required features, or any questions..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block" id="formSubmitBtn">
+                <span>Send Message</span>
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+
+              <div class="form-feedback hidden" id="formFeedback">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Thank you! Your inquiry has been received. Our team will get back to you shortly.</span>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Clean, Balanced Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <div class="footer-logo">
+            <img src="ROLogo.jpeg" alt="RO Softwares" />
+            <div class="f-text">
+              <span class="f-name">RO SOFTWARES</span>
+              <span class="f-motto">BUILD • AUTOMATE • GROW</span>
+            </div>
+          </div>
+          <p class="footer-desc">
+            You think it on paper. We build it with technology. Dedicated engineering for modern businesses, live events, and custom software.
+          </p>
+        </div>
+
+        <div class="footer-nav-col">
+          <h5>Navigation</h5>
+          <ul>
+            <li><a href="#about">About Philosophy</a></li>
+            <li><a href="#services">Our Capabilities</a></li>
+            <li><a href="#projects">Featured Projects</a></li>
+            <li><a href="#team">6-Member Squad</a></li>
+            <li><a href="#process">Development Process</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h5>Solutions</h5>
+          <ul>
+            <li><a href="#projects">Gym Management SaaS</a></li>
+            <li><a href="#projects">State Quiz & Event Platforms</a></li>
+            <li><a href="#projects">Custom Business Portals</a></li>
+            <li><a href="#contact">Hire Dedicated Squad</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact-col">
+          <h5>Direct Contact</h5>
+          <p><i class="fa-solid fa-envelope"></i> contact@rosoftwares.com</p>
+          <p><i class="fa-brands fa-whatsapp"></i> WhatsApp Available</p>
+          <p><i class="fa-solid fa-users"></i> 6 Specialized Core Engineers</p>
+          <a href="#contact" class="btn btn-secondary btn-sm mt-3">Start a Project</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear">2026</span> RO Softwares. All rights reserved.</p>
+        <a href="#hero" class="back-to-top">Back to top <i class="fa-solid fa-arrow-up"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal for Project Screenshots -->
+  <div class="image-lightbox-modal" id="imageLightbox" aria-hidden="true">
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightboxCloseBtn" aria-label="Close Lightbox">&times;</button>
+      <img src="projects/Gym.png" alt="Full Screenshot Preview" id="lightboxImg" />
+      <div class="lightbox-caption" id="lightboxCaption">RV Fitness - Landing & Membership Pricing</div>
+    </div>
+  </div>
+
+  <!-- Clean, Lightweight Script -->
+  <script src="script.js"></script>
+</body>
+</html>
